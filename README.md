@@ -1,4 +1,4 @@
-# Student Feedback System!
+# Student Feedback System
 
 A very simple, beginner-friendly full-stack web application designed for a lab demonstration. 
 
