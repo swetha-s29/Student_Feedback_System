@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Submit Feedback</h1>
+    </header>
+    
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="btn btn-outline">Home</a>
+            <a href="view.html" class="btn btn-outline">View Feedback</a>
+        </div>
+        
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="feedbackMessage">Your Feedback:</label>
+                <textarea id="feedbackMessage" required placeholder="Tell us what you think..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%;">Submit Feedback</button>
+        </form>
+        
+        <div id="statusMessage" style="margin-top: 1rem; text-align: center; font-weight: bold;"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Specific logic for submit page
+        document.getElementById('feedbackForm').addEventListener('submit', submitFeedback);
+    </script>
+</body>
+</html>

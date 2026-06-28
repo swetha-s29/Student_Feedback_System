@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>All Feedback</h1>
+    </header>
+    
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="btn btn-outline">Home</a>
+            <a href="submit.html" class="btn btn-outline">Submit New Feedback</a>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>Recent Submissions</h2>
+            <span style="font-size: 0.9rem; color: #555;">Auto-refreshing every 2s</span>
+        </div>
+        
+        <div id="feedbackContainer">
+            <div class="empty-message">Loading feedback...</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Load initially
+        loadFeedback();
+        
+        // Setup real-time simulation (refresh every 2 seconds)
+        setInterval(loadFeedback, 2000);
+    </script>
+</body>
+</html>
